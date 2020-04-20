@@ -1,4 +1,4 @@
-*version 9.1 377462895
+*version 9.1 589833160
 u 475
 V? 3
 R? 8
@@ -15,7 +15,7 @@ TABLE? 2
 @analysis
 .TRAN 1 0 0 0
 +0 0.00001s
-+1 30ms
++1 2ms
 +5 {PER}
 .SENS 0 {PER}
 @targets
@@ -31,11 +31,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 14222 
+pageloc 1 0 14445 
 @status
-n 0 120:03:11:18:55:59;1586645759 e 
-s 2832 120:03:13:12:23:17;1586794997 e 
-c 120:03:11:18:55:56;1586645756
+n 0 120:03:15:19:49:07;1586994547 e 
+s 2832 120:03:15:19:49:07;1586994547 e 
+c 120:03:15:19:49:05;1586994545
 *page 1 0 970 720 iA
 @ports
 port 44 GND_EARTH 320 360 h
@@ -221,15 +221,6 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 x 0:13 0 0 0 hln 100 PKGREF=R2
 a 0 xp 9 0 15 0 hln 100 REFDES=R2
 a 0 u 13 0 30 35 hln 100 VALUE={{R}}
-part 104 param 620 280 h
-a 0 u 13 0 50 42 hlb 100 VALUE3=35
-a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
-a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
-a 0 u 13 0 0 30 hln 100 NAME2=L
-a 0 u 13 0 0 40 hln 100 NAME3=RL
-a 0 u 13 0 0 20 hln 100 NAME1=C
-a 0 u 13 0 50 22 hlb 100 VALUE1=22n
-a 0 u 13 0 50 32 hlb 100 VALUE2=150m
 part 409 VPULSE 570 470 h
 a 1 u 0 0 0 0 hcn 100 V1=-2
 a 1 u 0 0 0 0 hcn 100 V2=2
@@ -239,6 +230,22 @@ a 0 x 0:13 0 0 0 hln 100 PKGREF=V2
 a 1 xp 9 0 20 10 hcn 100 REFDES=V2
 a 1 u 0 0 0 0 hcn 100 PW={50*{PW}}
 a 1 u 0 0 0 0 hcn 100 PER={50*{PER}}
+part 356 r 320 520 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 30 35 hln 100 VALUE={R}
+a 0 x 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 xp 9 0 15 0 hln 100 REFDES=R1
+part 104 param 620 280 h
+a 0 u 13 0 50 42 hlb 100 VALUE3=35
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 0 30 hln 100 NAME2=L
+a 0 u 13 0 0 40 hln 100 NAME3=RL
+a 0 u 13 0 0 20 hln 100 NAME1=C
+a 0 u 13 0 50 22 hlb 100 VALUE1=10n
+a 0 u 13 0 50 32 hlb 100 VALUE2=50m
 part 275 param 620 250 h
 a 0 u 13 0 0 20 hln 100 NAME1=R
 a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
@@ -252,14 +259,7 @@ a 0 u 13 0 0 30 hln 100 NAME2=PW
 a 0 u 13 0 0 40 hln 100 NAME3=T_MOD
 a 0 u 13 0 35 32 hlb 100 VALUE2={{PER}/2}
 a 0 u 13 0 37 42 hlb 100 VALUE3=1
-a 0 u 13 0 35 22 hlb 100 VALUE1={3*10**-3}
-part 356 r 320 520 v
-a 0 sp 0 0 0 10 hlb 100 PART=r
-a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
-a 0 s 0:13 0 0 0 hln 100 GATE=
-a 0 u 13 0 30 35 hln 100 VALUE={R}
-a 0 x 0:13 0 0 0 hln 100 PKGREF=R1
-a 0 xp 9 0 15 0 hln 100 REFDES=R1
+a 0 u 13 0 35 22 hlb 100 VALUE1={3*10**-2}
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
@@ -267,11 +267,13 @@ a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 463 iMarker 320 300 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(R);;DARKPINK
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(RL_VLc);;DARKPINK
 a 0 a 0 0 6 20 hlb 100 LABEL=16
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTGREEN
 part 466 nodeMarker 470 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=RL_VLc:2;;BRIGHTGREEN
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
@@ -279,11 +281,13 @@ a 0 a 0 0 4 22 hlb 100 LABEL=19
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTRED
 part 464 iMarker 320 480 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(R1);;LIGHTBLUE
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(RL_VLc1);;LIGHTBLUE
 a 0 a 0 0 6 20 hlb 100 LABEL=17
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTBLUE
 part 467 nodeMarker 470 480 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=RL_VLc1:2;;BRIGHTRED
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
@@ -291,17 +295,20 @@ a 0 a 0 0 4 22 hlb 100 LABEL=20
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTCYAN
 part 465 iMarker 710 480 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(R2);;LIGHTGREEN
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 6 20 hlb 100 LABEL=18
 a 0 sp 0 0 0 0 hln 100 COLOR=MUSTARD
 part 468 nodeMarker 860 480 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=RL_VLc2:2;;PINK
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=21
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTYELLOW
 part 474 nodeMarker 320 480 v
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=25
 @conn
@@ -501,12 +508,6 @@ j 860 480
 j 860 480
 + p 468 pin1
 + w 449
-j 570 470
-+ p 409 +
-+ w 421
-j 570 510
-+ p 409 -
-+ w 423
 j 470 520
 + p 357 1
 + w 364
@@ -627,18 +628,24 @@ j 180 470
 j 180 510
 + p 350 -
 + w 364
-j 180 290
-+ p 60 +
-+ w 10
-j 180 330
-+ p 60 -
-+ w 146
 j 320 480
 + p 474 pin1
 + p 356 2
 j 320 480
 + p 474 pin1
 + w 378
+j 180 290
++ p 60 +
++ w 10
+j 180 330
++ p 60 -
++ w 146
+j 570 470
++ p 409 +
++ w 421
+j 570 510
++ p 409 -
++ w 423
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1

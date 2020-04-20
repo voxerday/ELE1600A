@@ -1,4 +1,4 @@
-*version 9.1 1010554278
+*version 9.1 3082309435
 u 472
 V? 3
 R? 8
@@ -31,11 +31,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 14077 
+pageloc 1 0 14270 
 @status
-n 0 120:03:14:09:36:53;1586871413 e 
-s 2832 120:03:14:09:36:56;1586871416 e 
-c 120:03:11:19:04:45;1586646285
+n 0 120:03:15:19:29:02;1586993342 e 
+s 2832 120:03:15:19:29:05;1586993345 e 
+c 120:03:15:19:29:00;1586993340
 *page 1 0 970 720 iA
 @ports
 port 44 GND_EARTH 320 360 h
@@ -237,20 +237,11 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 x 0:13 0 0 0 hln 100 PKGREF=R2
 a 0 xp 9 0 15 0 hln 100 REFDES=R2
 a 0 u 13 0 30 35 hln 100 VALUE={10*{R}}
-part 104 param 620 280 h
-a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
-a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
-a 0 u 13 0 0 30 hln 100 NAME2=L
-a 0 u 13 0 0 40 hln 100 NAME3=RL
-a 0 u 13 0 0 20 hln 100 NAME1=C
-a 0 u 13 0 50 42 hlb 100 VALUE3=35
-a 0 u 13 0 50 22 hlb 100 VALUE1=22n
-a 0 u 13 0 50 32 hlb 100 VALUE2=150m
 part 275 param 620 250 h
 a 0 u 13 0 0 20 hln 100 NAME1=R
 a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
 a 1 ap 0 0 10 -2 hcn 100 REFDES=PM3
-a 0 u 13 0 50 22 hlb 100 VALUE1=100
+a 0 u 13 0 50 22 hlb 100 VALUE1=4k
 part 105 param 700 280 h
 a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
 a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
@@ -258,44 +249,59 @@ a 0 u 13 0 0 20 hln 100 NAME1=PER
 a 0 u 13 0 0 30 hln 100 NAME2=PW
 a 0 u 13 0 0 40 hln 100 NAME3=T_MOD
 a 0 u 13 0 35 32 hlb 100 VALUE2={{PER}/2}
-a 0 u 13 0 37 42 hlb 100 VALUE3=1
-a 0 u 13 0 35 22 hlb 100 VALUE1={3*10**-3}
+a 0 u 13 0 37 42 hlb 100 VALUE3=10
+a 0 u 13 0 35 22 hlb 100 VALUE1={2.5*10**-3}
+part 104 param 620 280 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 0 30 hln 100 NAME2=L
+a 0 u 13 0 0 40 hln 100 NAME3=RL
+a 0 u 13 0 0 20 hln 100 NAME1=C
+a 0 u 13 0 50 42 hlb 100 VALUE3=35
+a 0 u 13 0 50 32 hlb 100 VALUE2=50m
+a 0 u 13 0 50 22 hlb 100 VALUE1=10n
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
 a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 463 iMarker 320 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(R);;DARKPINK
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(RL_VLc);;DARKPINK
 a 0 a 0 0 6 20 hlb 100 LABEL=16
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTGREEN
 part 466 nodeMarker 470 300 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=RL_VLc:2;;BRIGHTGREEN
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=19
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTRED
 part 464 iMarker 320 480 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(R1);;LIGHTBLUE
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(RL_VLc1);;LIGHTBLUE
 a 0 a 0 0 6 20 hlb 100 LABEL=17
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTBLUE
 part 467 nodeMarker 470 480 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=RL_VLc1:2;;BRIGHTMAGENTA
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=20
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTYELLOW
 part 465 iMarker 710 480 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=-I(R2);;PURPLE
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 6 20 hlb 100 LABEL=18
 a 0 sp 0 0 0 0 hln 100 COLOR=MUSTARD
 part 468 nodeMarker 860 480 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=RL_VLc2:2;;BRIGHTBLUE
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
