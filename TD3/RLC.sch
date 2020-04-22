@@ -1,4 +1,4 @@
-*version 9.1 1056033127
+*version 9.1 853107525
 u 86
 R? 4
 C? 5
@@ -25,11 +25,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 3126 
+pageloc 1 0 3181 
 @status
-n 0 120:03:08:14:43:07;1586371387 e 
-s 0 120:03:08:14:43:08;1586371388 e 
-c 120:03:08:14:43:56;1586371436
+n 0 120:03:21:13:47:35;1587491255 e 
+s 2832 120:03:21:13:47:38;1587491258 e 
+c 120:03:21:13:47:34;1587491254
 *page 1 0 970 720 iA
 @ports
 port 81 GND_EARTH 320 190 h
@@ -44,11 +44,6 @@ a 1 u 0 0 0 0 hcn 100 V2=2
 a 1 u 0 0 0 0 hcn 100 TD=
 a 1 u 0 0 0 0 hcn 100 PER=0.00025
 a 1 u 0 0 0 0 hcn 100 PW=0.000175
-part 83 param 460 140 h
-a 0 u 13 0 0 20 hln 100 NAME1=R
-a 0 u 13 0 50 22 hlb 100 VALUE1={2*SQRT(L/C)}
-a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
-a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
 part 84 param 460 170 h
 a 0 u 13 0 50 22 hlb 100 VALUE1=10n
 a 0 u 13 0 0 30 hln 100 NAME2=L
@@ -88,6 +83,11 @@ a 0 u 13 0 35 32 hlb 100 VALUE2={{PER}/2}
 a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
 a 1 ap 0 0 10 -2 hcn 100 REFDES=PM3
 a 0 u 13 0 35 22 hlb 100 VALUE1={T_MOD*SQRT(L*C)}
+part 83 param 460 140 h
+a 0 u 13 0 0 20 hln 100 NAME1=R
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM1
+a 0 u 13 0 50 22 hlb 100 VALUE1=4000
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
@@ -95,9 +95,11 @@ a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 32 nodeMarker 280 130 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=0
 a 0 a 0 0 4 22 hlb 100 LABEL=5
 part 21 nodeMarker 380 190 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=L1:1
 a 0 s 0 0 0 0 hln 100 PROBEVAR=

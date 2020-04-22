@@ -1,5 +1,5 @@
-*version 9.1 1046942669
-u 164
+*version 9.1 258208538
+u 165
 V? 7
 R? 7
 C? 5
@@ -24,10 +24,10 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 6772 
+pageloc 1 0 6883 
 @status
 n 0 120:03:20:13:35:41;1587404141 e 
-s 2832 120:03:20:13:35:44;1587404144 e 
+s 2832 120:03:22:13:11:20;1587575480 e 
 *page 1 0 970 720 iA
 @ports
 port 5 GND_EARTH 180 340 h
@@ -102,20 +102,6 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 u 13 0 15 25 hln 100 VALUE=4.17n
 a 0 a 0:13 0 0 0 hln 100 PKGREF=C4
 a 0 ap 9 0 15 0 hln 100 REFDES=C4
-part 109 r 470 330 v
-a 0 sp 0 0 0 10 hlb 100 PART=r
-a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
-a 0 s 0:13 0 0 0 hln 100 GATE=
-a 0 u 13 0 15 25 hln 100 VALUE=739.1
-a 0 x 0:13 0 0 0 hln 100 PKGREF=Ra
-a 0 xp 9 0 15 0 hln 100 REFDES=Ra
-part 79 r 250 330 v
-a 0 sp 0 0 0 10 hlb 100 PART=r
-a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
-a 0 s 0:13 0 0 0 hln 100 GATE=
-a 0 x 0:13 0 0 0 hln 100 PKGREF=R1
-a 0 xp 9 0 15 0 hln 100 REFDES=R1
-a 0 u 13 0 15 25 hln 100 VALUE=643.9
 part 162 vac 130 430 h
 a 0 sp 0 0 0 50 hln 100 PART=vac
 a 0 a 0:13 0 0 0 hln 100 PKGREF=V5
@@ -126,13 +112,6 @@ a 0 sp 0 0 0 50 hln 100 PART=vac
 a 0 u 13 0 -9 23 hcn 100 ACMAG=2v
 a 0 a 0:13 0 0 0 hln 100 PKGREF=V6
 a 1 ap 9 0 20 10 hcn 100 REFDES=V6
-part 154 r 210 460 v
-a 0 sp 0 0 0 10 hlb 100 PART=r
-a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
-a 0 s 0:13 0 0 0 hln 100 GATE=
-a 0 a 0:13 0 0 0 hln 100 PKGREF=R6
-a 0 ap 9 0 15 0 hln 100 REFDES=R6
-a 0 u 13 0 30 0 hln 100 VALUE=0.01555
 part 153 r 150 500 h
 a 0 sp 0 0 0 10 hlb 100 PART=r
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
@@ -140,12 +119,34 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 ap 9 0 15 0 hln 100 REFDES=R5
 a 0 a 0:13 0 0 0 hln 100 PKGREF=R5
 a 0 u 13 0 15 25 hln 100 VALUE=0.00155
+part 154 r 210 460 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=R6
+a 0 ap 9 0 15 0 hln 100 REFDES=R6
+a 0 u 13 0 30 0 hln 100 VALUE=0.01555
+part 79 r 250 330 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 x 0:13 0 0 0 hln 100 PKGREF=R1
+a 0 xp 9 0 15 0 hln 100 REFDES=R1
+a 0 u 13 0 15 25 hln 100 VALUE=643.9
+part 109 r 470 330 v
+a 0 sp 0 0 0 10 hlb 100 PART=r
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
+a 0 s 0:13 0 0 0 hln 100 GATE=
+a 0 u 13 0 15 25 hln 100 VALUE=739.1
+a 0 x 0:13 0 0 0 hln 100 PKGREF=Ra
+a 0 xp 9 0 15 0 hln 100 REFDES=Ra
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
 a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 s 13 0 300 95 hrn 100 PAGENO=1
-part 28 vphase 210 480 h
+part 28 vphase 250 290 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=VP(R6:1);;BRIGHTBLUE
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=VP(R1:2);;BRIGHTBLUE
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
@@ -153,7 +154,8 @@ a 0 s 0 0 0 0 hln 100 PROBEVAR=VP(R3:2)
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=4
 a 0 sp 0 0 0 0 hln 100 COLOR=BRIGHTBLUE
-part 26 vdb 210 460 h
+part 26 vdb 470 290 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=VDB(R1:2);;DARKPINK
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=VDB(R6:2);;DARKPINK
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
@@ -175,26 +177,6 @@ s 300 280 300 260 102
 a 0 up 33 0 302 270 hlt 100 V=
 s 300 260 330 260 104
 a 0 up 33 0 315 259 hct 100 V=
-w 99
-a 0 up 0:33 0 0 0 hln 100 V=
-s 470 290 470 260 98
-a 0 up 33 0 472 275 hlt 100 V=
-s 470 260 460 260 100
-w 85
-a 0 up 0:33 0 0 0 hln 100 V=
-s 250 290 250 260 84
-a 0 up 33 0 252 275 hlt 100 V=
-s 250 260 240 260 86
-w 122
-a 0 up 0:33 0 0 0 hln 100 V=
-s 310 470 310 500 121
-s 260 500 260 490 123
-s 210 500 260 500 125
-s 310 500 260 500 129
-a 0 up 33 0 285 504 hct 100 V=
-s 190 500 210 500 131
-s 210 460 210 480 159
-s 210 480 210 500 160
 w 134
 a 0 up 0:33 0 0 0 hln 100 V=
 s 210 380 260 380 135
@@ -222,6 +204,25 @@ a 0 up 0:33 0 0 0 hln 100 V=
 s 80 280 80 260 6
 a 0 up 33 0 82 270 hlt 100 V=
 s 80 260 110 260 88
+w 122
+a 0 up 0:33 0 0 0 hln 100 V=
+s 310 470 310 500 121
+s 260 500 260 490 123
+s 210 500 260 500 125
+s 310 500 260 500 129
+a 0 up 33 0 285 504 hct 100 V=
+s 190 500 210 500 131
+s 210 460 210 500 160
+w 85
+a 0 up 0:33 0 0 0 hln 100 V=
+s 250 260 240 260 86
+s 250 290 250 260 164
+a 0 up 33 0 252 275 hlt 100 V=
+w 99
+a 0 up 0:33 0 0 0 hln 100 V=
+s 470 290 470 260 98
+a 0 up 33 0 472 275 hlt 100 V=
+s 470 260 460 260 100
 @junction
 j 180 340
 + s 5
@@ -307,12 +308,6 @@ j 250 290
 j 240 260
 + p 55 2
 + w 85
-j 210 480
-+ p 28 pin1
-+ w 122
-j 210 460
-+ p 26 pin1
-+ w 122
 j 130 430
 + p 162 +
 + w 134
@@ -331,9 +326,18 @@ j 210 460
 j 210 420
 + p 154 2
 + w 134
-j 210 460
+j 250 290
++ p 28 pin1
++ p 79 2
+j 250 290
++ p 28 pin1
++ w 85
+j 470 290
 + p 26 pin1
-+ p 154 1
++ p 109 2
+j 470 290
++ p 26 pin1
++ w 99
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1

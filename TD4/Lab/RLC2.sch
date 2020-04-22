@@ -1,4 +1,4 @@
-*version 9.1 126458585
+*version 9.1 2076701358
 u 674
 V? 13
 R? 11
@@ -28,11 +28,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 8274 
+pageloc 1 0 8460 
 @status
-n 0 120:03:20:15:55:23;1587412523 e 
-s 2832 120:03:20:15:55:26;1587412526 e 
-c 120:03:20:15:55:11;1587412511
+n 0 120:03:21:23:43:15;1587526995 e 
+s 2832 120:03:21:23:43:15;1587526995 e 
+c 120:03:21:23:43:12;1587526992
 *page 1 0 970 720 iA
 @ports
 port 111 GND_EARTH 480 120 h
@@ -104,15 +104,6 @@ a 0 sp 0 0 0 50 hln 100 PART=vac
 a 0 u 13 0 -9 23 hcn 100 ACMAG=2v
 a 0 a 0:13 0 0 0 hln 100 PKGREF=V11
 a 1 ap 9 0 20 10 hcn 100 REFDES=V11
-part 669 param 760 260 h
-a 0 u 13 0 0 40 hln 100 NAME3=MOD
-a 0 u 13 0 50 42 hlb 100 VALUE3=1
-a 0 u 13 0 0 20 hln 100 NAME1=dF
-a 0 u 13 0 0 30 hln 100 NAME2=Fo
-a 0 u 13 0 50 32 hlb 100 VALUE2=4500
-a 0 u 13 0 50 22 hlb 100 VALUE1=200
-a 0 a 0:13 0 0 0 hln 100 PKGREF=PM5
-a 1 ap 0 0 10 -2 hcn 100 REFDES=PM5
 part 623 r 440 230 v
 a 0 sp 0 0 0 10 hlb 100 PART=r
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
@@ -127,15 +118,6 @@ a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
 a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 x 0:13 0 0 0 hln 100 PKGREF=_r
 a 0 xp 9 0 15 0 hln 100 REFDES=_r
-part 265 param 760 170 h
-a 0 u 13 0 50 32 hlb 100 VALUE2=300m
-a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
-a 1 ap 0 0 10 -2 hcn 100 REFDES=PM3
-a 0 u 13 0 0 20 hln 100 NAME1=RL
-a 0 u 13 0 0 30 hln 100 NAME2=L
-a 0 u 13 0 0 40 hln 100 NAME3=C
-a 0 u 13 0 50 42 hlb 100 VALUE3={1/({L}*(2*{PI}*(3500+(20*{N})))**2)}
-a 0 u 13 0 50 22 hlb 100 VALUE1={0.04*{PI}*{Fo}*L}
 part 622 r 380 270 h
 a 0 u 13 0 15 25 hln 100 VALUE={{R}/10}
 a 0 sp 0 0 0 10 hlb 100 PART=r
@@ -157,15 +139,6 @@ a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
 a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=R8
 a 0 ap 9 0 15 0 hln 100 REFDES=R8
-part 174 param 760 220 h
-a 0 u 13 0 50 42 hlb 100 VALUE3={1.1/(({dF}/(2*{PI}*({Fo}**2)*{L}))-(1/(RL*10000)))}
-a 0 u 13 0 50 32 hlb 100 VALUE2=9
-a 0 u 13 0 0 30 hln 100 NAME2=N
-a 0 u 13 0 50 22 hlb 100 VALUE1=3.1415926535897932846
-a 0 u 13 0 0 20 hln 100 NAME1=PI
-a 0 u 13 0 0 40 hln 100 NAME3=R
-a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
-a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
 part 619 l 490 200 d
 a 0 sp 0 0 0 10 hlb 100 PART=l
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=L2012C
@@ -173,6 +146,33 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=L5
 a 0 ap 9 0 15 0 hln 100 REFDES=L5
 a 0 u 13 0 15 25 hln 100 VALUE={L}
+part 265 param 760 170 h
+a 0 u 13 0 50 32 hlb 100 VALUE2=300m
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM3
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM3
+a 0 u 13 0 0 20 hln 100 NAME1=RL
+a 0 u 13 0 0 30 hln 100 NAME2=L
+a 0 u 13 0 0 40 hln 100 NAME3=C
+a 0 u 13 0 50 22 hlb 100 VALUE1={0.04*{PI}*{Fo}*L}
+a 0 u 13 0 50 42 hlb 100 VALUE3={1/({L}*((2*{PI}*{Fo})**2))}
+part 174 param 760 220 h
+a 0 u 13 0 50 42 hlb 100 VALUE3={1.1/(({dF}/(2*{PI}*({Fo}**2)*{L}))-(1/(RL*10000)))}
+a 0 u 13 0 0 30 hln 100 NAME2=N
+a 0 u 13 0 50 22 hlb 100 VALUE1=3.1415926535897932846
+a 0 u 13 0 0 20 hln 100 NAME1=PI
+a 0 u 13 0 0 40 hln 100 NAME3=R
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM2
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM2
+a 0 u 13 0 50 32 hlb 100 VALUE2=4
+part 669 param 760 260 h
+a 0 u 13 0 0 40 hln 100 NAME3=MOD
+a 0 u 13 0 50 42 hlb 100 VALUE3=1
+a 0 u 13 0 0 20 hln 100 NAME1=dF
+a 0 u 13 0 0 30 hln 100 NAME2=Fo
+a 0 a 0:13 0 0 0 hln 100 PKGREF=PM5
+a 1 ap 0 0 10 -2 hcn 100 REFDES=PM5
+a 0 u 13 0 50 22 hlb 100 VALUE1=133.33
+a 0 u 13 0 50 32 hlb 100 VALUE2=4000
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
@@ -180,11 +180,17 @@ a 1 s 13 0 340 95 hrn 100 PAGECOUNT=1
 a 1 s 13 0 300 95 hrn 100 PAGENO=1
 part 670 vdb 440 240 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=10
 part 672 vdb 610 120 h
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=11
 part 673 vdb 620 210 h
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
+a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 s 0 0 0 0 hln 100 PROBEVAR=
 a 0 a 0 0 4 22 hlb 100 LABEL=12
 @conn
@@ -404,8 +410,8 @@ t 165 t 5 674 230 660 270 2700 7
 Oscillo
 t 164 t 5 694 140 680 180 2700 5
 Sonde
-r 167 r 0 700 130 600 190
-r 166 r 0 680 200 560 290
+r 167 r 0 600 130 700 190
+r 166 r 0 560 200 680 290
 t 168 t 6 720 160 860 10 0 140
 Mart-Alex = 9
 -L=300mH
